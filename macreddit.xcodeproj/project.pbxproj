@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */; };
+		E42B1B9122F3240500DCCB35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1B9022F3240500DCCB35 /* ViewController.swift */; };
+		E42B1B9322F3240600DCCB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9222F3240600DCCB35 /* Assets.xcassets */; };
+		E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9422F3240600DCCB35 /* Main.storyboard */; };
+		E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* macredditTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E42B1B9E22F3240700DCCB35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E42B1B8322F3240500DCCB35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E42B1B8A22F3240500DCCB35;
+			remoteInfo = macreddit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E42B1B8B22F3240500DCCB35 /* macreddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macreddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E42B1B9022F3240500DCCB35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E42B1B9222F3240600DCCB35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E42B1B9522F3240600DCCB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E42B1B9722F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E42B1B9822F3240700DCCB35 /* macreddit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macreddit.entitlements; sourceTree = "<group>"; };
+		E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macredditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B1BA122F3240700DCCB35 /* macredditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macredditTests.swift; sourceTree = "<group>"; };
+		E42B1BA322F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E42B1B8822F3240500DCCB35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E42B1B9A22F3240700DCCB35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E42B1B8222F3240500DCCB35 = {
+			isa = PBXGroup;
+			children = (
+				E42B1B8D22F3240500DCCB35 /* macreddit */,
+				E42B1BA022F3240700DCCB35 /* macredditTests */,
+				E42B1B8C22F3240500DCCB35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E42B1B8C22F3240500DCCB35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E42B1B8B22F3240500DCCB35 /* macreddit.app */,
+				E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E42B1B8D22F3240500DCCB35 /* macreddit */ = {
+			isa = PBXGroup;
+			children = (
+				E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */,
+				E42B1B9022F3240500DCCB35 /* ViewController.swift */,
+				E42B1B9222F3240600DCCB35 /* Assets.xcassets */,
+				E42B1B9422F3240600DCCB35 /* Main.storyboard */,
+				E42B1B9722F3240700DCCB35 /* Info.plist */,
+				E42B1B9822F3240700DCCB35 /* macreddit.entitlements */,
+			);
+			path = macreddit;
+			sourceTree = "<group>";
+		};
+		E42B1BA022F3240700DCCB35 /* macredditTests */ = {
+			isa = PBXGroup;
+			children = (
+				E42B1BA122F3240700DCCB35 /* macredditTests.swift */,
+				E42B1BA322F3240700DCCB35 /* Info.plist */,
+			);
+			path = macredditTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E42B1B8A22F3240500DCCB35 /* macreddit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E42B1BA622F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macreddit" */;
+			buildPhases = (
+				E42B1B8722F3240500DCCB35 /* Sources */,
+				E42B1B8822F3240500DCCB35 /* Frameworks */,
+				E42B1B8922F3240500DCCB35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macreddit;
+			productName = macreddit;
+			productReference = E42B1B8B22F3240500DCCB35 /* macreddit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E42B1B9C22F3240700DCCB35 /* macredditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E42B1BA922F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macredditTests" */;
+			buildPhases = (
+				E42B1B9922F3240700DCCB35 /* Sources */,
+				E42B1B9A22F3240700DCCB35 /* Frameworks */,
+				E42B1B9B22F3240700DCCB35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E42B1B9F22F3240700DCCB35 /* PBXTargetDependency */,
+			);
+			name = macredditTests;
+			productName = macredditTests;
+			productReference = E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E42B1B8322F3240500DCCB35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Tempest;
+				TargetAttributes = {
+					E42B1B8A22F3240500DCCB35 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					E42B1B9C22F3240700DCCB35 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = E42B1B8A22F3240500DCCB35;
+					};
+				};
+			};
+			buildConfigurationList = E42B1B8622F3240500DCCB35 /* Build configuration list for PBXProject "macreddit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E42B1B8222F3240500DCCB35;
+			productRefGroup = E42B1B8C22F3240500DCCB35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E42B1B8A22F3240500DCCB35 /* macreddit */,
+				E42B1B9C22F3240700DCCB35 /* macredditTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E42B1B8922F3240500DCCB35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42B1B9322F3240600DCCB35 /* Assets.xcassets in Resources */,
+				E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E42B1B9B22F3240700DCCB35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E42B1B8722F3240500DCCB35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42B1B9122F3240500DCCB35 /* ViewController.swift in Sources */,
+				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E42B1B9922F3240700DCCB35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E42B1B9F22F3240700DCCB35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E42B1B8A22F3240500DCCB35 /* macreddit */;
+			targetProxy = E42B1B9E22F3240700DCCB35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E42B1B9422F3240600DCCB35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E42B1B9522F3240600DCCB35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E42B1BA422F3240700DCCB35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E42B1BA522F3240700DCCB35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E42B1BA722F3240700DCCB35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = macreddit/macreddit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macreddit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macreddit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E42B1BA822F3240700DCCB35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = macreddit/macreddit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macreddit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macreddit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E42B1BAA22F3240700DCCB35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macredditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macredditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macreddit.app/Contents/MacOS/macreddit";
+			};
+			name = Debug;
+		};
+		E42B1BAB22F3240700DCCB35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macredditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macredditTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macreddit.app/Contents/MacOS/macreddit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E42B1B8622F3240500DCCB35 /* Build configuration list for PBXProject "macreddit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E42B1BA422F3240700DCCB35 /* Debug */,
+				E42B1BA522F3240700DCCB35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E42B1BA622F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macreddit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E42B1BA722F3240700DCCB35 /* Debug */,
+				E42B1BA822F3240700DCCB35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E42B1BA922F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macredditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E42B1BAA22F3240700DCCB35 /* Debug */,
+				E42B1BAB22F3240700DCCB35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E42B1B8322F3240500DCCB35 /* Project object */;
+}
