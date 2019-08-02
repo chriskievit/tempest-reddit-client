@@ -11,8 +11,10 @@ import Cocoa
 
 class MainWindowController : NSWindowController {
     @IBAction func profileButtonClicked(sender: AnyObject) {
-        let authWindowController: AuthWindowController = storyboard?.instantiateController(withIdentifier: "AuthWindowController") as! AuthWindowController
-        
-        authWindowController.showWindow(self)
+//        let authWindowController: AuthWindowController = storyboard?.instantiateController(withIdentifier: "AuthWindowController") as! AuthWindowController
+//
+//        authWindowController.showWindow(self)
+        let accountController: NSWindowController = storyboard?.instantiateController(withIdentifier: "AccountWindowController") as! NSWindowController
+        window?.beginSheet(accountController.window!, completionHandler: nil)
     }
 }
