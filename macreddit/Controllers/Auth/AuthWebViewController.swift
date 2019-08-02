@@ -12,14 +12,10 @@ import WebKit
 class AuthWebViewController: NSViewController, WKNavigationDelegate {
     @IBOutlet var webView: WKWebView?
     
+    var viewModel: AuthViewModel!
+    
     override func viewDidLoad() {
-        var clientId: String = Bundle.main.infoDictionary?["ClientId"] as! String
-        clientId = clientId.replacingOccurrences(of: "\"", with: "")
-        let callbackUrl = "brc://validate"
-        let scopes = ["read", "mysubreddits", "account"]
-        
-        let authUrl = AccountController.generateAuthUrl(clientId: clientId, redirectUrl: callbackUrl, scopes: scopes)
-        guard let url = authUrl else {
+        guard let url = viewModel.authUrl() else {
             return
         }
         
@@ -29,8 +25,10 @@ class AuthWebViewController: NSViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if(navigationAction.request.url != nil &&
             navigationAction.request.url?.scheme == "brc") {
-            print("done! let's go!")
+            viewModel.validateToken(callbackUrl: navigationAction.request.url!)
+            decisionHandler(.cancel)
         }
+        
         decisionHandler(.allow)
     }
 }

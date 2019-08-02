@@ -18,4 +18,8 @@ class AccountController: ApiController {
         
         return URL(string: urlString)
     }
+    
+    static func getOAuthToken(clientId: String, redirectUrl: String, code: String, isRefreshToken: Bool) {
+        
+    }
 }
