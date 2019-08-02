@@ -1,0 +1,100 @@
+//
+//  RedditApiController.swift
+//  macreddit
+//
+//  Created by Chris on 02/08/2019.
+//  Copyright © 2019 Tempest. All rights reserved.
+//
+
+import Foundation
+
+enum RequestError: Error {
+    case serverError
+    case urlFormatError
+    case parameterEncodingError
+    case responseDecodingError
+    case noDataError
+}
+
+protocol ApiController {
+}
+
+extension ApiController {
+    func performGetRequest<T: Codable>(url: String, result: @escaping (Result<T, RequestError>) -> Void) {
+        guard let url = URL(string: url) else {
+            result(.failure(.urlFormatError))
+            return
+        }
+        
+        performRequest(request: createRequest(url: url, method: "GET"), result: result)
+    }
+    
+    func performPostRequest<Tresult: Codable, Tparam: Codable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void)
+    {
+        guard let url = URL(string: url) else {
+            result(.failure(.urlFormatError))
+            return
+        }
+        
+        guard let jsonData = encode(data: data) else {
+            result(.failure(.parameterEncodingError))
+            return
+        }
+        
+        performRequest(request: createRequest(url: url, method: "POST", parameters: jsonData), result: result)
+    }
+    
+    private func performRequest<T: Codable>(request: URLRequest, result: @escaping (Result<T, RequestError>) -> Void) {
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else {
+                result(.failure(.serverError))
+                return
+            }
+            
+            guard let data = data else {
+                result(.failure(.noDataError))
+                return
+            }
+            
+            let dataString = String(data: data, encoding: .utf8)
+            guard let decodedResponse: T = self.decode(jsonString: dataString!) else {
+                result(.failure(.responseDecodingError))
+                return
+            }
+            
+            result(.success(decodedResponse))
+        }.resume()
+    }
+    
+    private func createRequest(url: URL, method: String, parameters: Data? = nil) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = method
+        
+        if let parameters = parameters {
+            request.httpBody = parameters
+        }
+        
+        // Set default headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        return request
+    }
+    
+    private func encode<T: Codable>(data: T) -> Data? {
+        return try? JSONEncoder().encode(data)
+    }
+    
+    private func decode<T: Codable>(jsonString: String) -> T? {
+        guard !jsonString.isEmpty else {
+            return nil
+        }
+        
+        let jsonData: Data? = jsonString.data(using: .utf8)
+        
+        guard let data = jsonData else {
+            return nil
+        }
+        
+        return try? JSONDecoder().decode(T.self, from: data)
+    }
+}
