@@ -808,10 +808,10 @@
             </objects>
             <point key="canvasLocation" x="85" y="196.5"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Main Split View Controller-->
         <scene sceneID="0gh-xm-cUW">
             <objects>
-                <splitViewController id="Yp6-Un-TGl" sceneMemberID="viewController">
+                <splitViewController id="Yp6-Un-TGl" customClass="MainSplitViewController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="tfh-Gc-ols"/>
                         <splitViewItem id="gnO-3K-Jep"/>
