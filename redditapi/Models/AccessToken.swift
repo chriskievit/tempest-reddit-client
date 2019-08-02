@@ -11,10 +11,10 @@ import Foundation
 class AccessToken: Codable {
     var accessToken: String
     var tokenType: String
-    var expiresIn: String
-    var expiresAt: Date
+    var expiresIn: Int
+    var expiresAt: Date?
     var scope: String
-    var refreshToken: String
+    var refreshToken: String?
     
     enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"

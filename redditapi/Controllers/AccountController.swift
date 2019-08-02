@@ -19,7 +19,18 @@ class AccountController: ApiController {
         return URL(string: urlString)
     }
     
-    static func getOAuthToken(clientId: String, redirectUrl: String, code: String, isRefreshToken: Bool) {
+    func getOAuthToken(clientId: String, redirectUrl: String, code: String, isRefreshToken: Bool, result: @escaping (Result<AccessToken, RequestError>) -> Void) {
+        let url = "https://www.reddit.com/api/v1/access_token"
         
+        let authData: Data = String(format: "%@:", clientId).data(using: .utf8)!
+        let headers = ["Authorization": String(format: "Basic %@", authData.base64EncodedString())]
+        
+        let data = [
+            "grant_type": (isRefreshToken ? "refresh_token" : "authorization_code"),
+            (isRefreshToken ? "refresh_token" : "code"): code,
+            "redirect_uri": redirectUrl
+        ]
+        
+        return performFormPostRequest(url: url, data: data, additionalHeaders: headers, result: result)
     }
 }

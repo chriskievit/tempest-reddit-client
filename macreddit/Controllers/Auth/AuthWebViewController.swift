@@ -12,7 +12,7 @@ import WebKit
 class AuthWebViewController: NSViewController, WKNavigationDelegate {
     @IBOutlet var webView: WKWebView?
     
-    var viewModel: AuthViewModel!
+    var viewModel: AuthViewModel = AuthViewModel()
     
     override func viewDidLoad() {
         guard let url = viewModel.authUrl() else {
@@ -23,10 +23,16 @@ class AuthWebViewController: NSViewController, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if(navigationAction.request.url != nil &&
-            navigationAction.request.url?.scheme == "brc") {
-            viewModel.validateToken(callbackUrl: navigationAction.request.url!)
-            decisionHandler(.cancel)
+        if let url = navigationAction.request.url,
+            url.scheme == "brc" {
+            let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+            let query: URLQueryItem? = urlComponents?.queryItems?.first(where: { $0.name == "code" })
+            
+            if let query = query {
+                viewModel.validateToken(code: query.value!)
+                decisionHandler(.cancel)
+                return
+            }
         }
         
         decisionHandler(.allow)

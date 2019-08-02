@@ -1,5 +1,5 @@
 //
-//  RedditApiController.swift
+//  ApiController.swift
 //  macreddit
 //
 //  Created by Chris on 02/08/2019.
@@ -29,8 +29,7 @@ extension ApiController {
         performRequest(request: createRequest(url: url, method: "GET"), result: result)
     }
     
-    func performPostRequest<Tresult: Codable, Tparam: Codable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void)
-    {
+    func performPostRequest<Tresult: Codable, Tparam: Codable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -42,6 +41,26 @@ extension ApiController {
         }
         
         performRequest(request: createRequest(url: url, method: "POST", parameters: jsonData), result: result)
+    }
+    
+    func performFormPostRequest<Tresult: Codable>(url: String, data: [String: String], additionalHeaders: [String: String], result: @escaping (Result<Tresult, RequestError>) -> Void) {
+        guard let url = URL(string: url) else {
+            result(.failure(.urlFormatError))
+            return
+        }
+        
+        let parsedData = parseFormData(formData: data)
+        let postData: Data = parsedData.data(using: String.Encoding.utf8)!
+        
+        var request = createRequest(url: url, method: "POST", parameters: postData, contentType: "application/x-www-form-urlencoded")
+        
+        additionalHeaders.forEach { (header, value) in
+            if header != "Content-Type" {
+                request.addValue(value, forHTTPHeaderField: header)
+            }
+        }
+        
+        performRequest(request: request, result: result)
     }
     
     private func performRequest<T: Codable>(request: URLRequest, result: @escaping (Result<T, RequestError>) -> Void) {
@@ -66,7 +85,7 @@ extension ApiController {
         }.resume()
     }
     
-    private func createRequest(url: URL, method: String, parameters: Data? = nil) -> URLRequest {
+    private func createRequest(url: URL, method: String, parameters: Data? = nil, contentType: String = "application/json") -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method
         
@@ -75,9 +94,18 @@ extension ApiController {
         }
         
         // Set default headers
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(contentType, forHTTPHeaderField: "Content-Type")
         
         return request
+    }
+    
+    private func parseFormData(formData: [String: String]) -> String {
+        var pairs: [String] = [String]()
+        formData.forEach { (key, value) in
+            pairs.append(String(format: "%@=%@", key, value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!))
+        }
+        
+        return pairs.joined(separator: "&")
     }
     
     private func encode<T: Codable>(data: T) -> Data? {
