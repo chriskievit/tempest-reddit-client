@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42913A222F4718F000639A5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A122F4718F000639A5 /* MainWindowController.swift */; };
+		E42913A522F483C9000639A5 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A422F483C9000639A5 /* AuthWebViewController.swift */; };
+		E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A622F485A4000639A5 /* AuthWindowController.swift */; };
 		E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */; };
 		E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */; };
 		E42B1B9322F3240600DCCB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9222F3240600DCCB35 /* Assets.xcassets */; };
 		E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9422F3240600DCCB35 /* Main.storyboard */; };
 		E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* macredditTests.swift */; };
-		E4EF323522F422EF00708323 /* RedditApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF323422F422EF00708323 /* RedditApiController.swift */; };
+		E4951DC022F4C6D400F050D8 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AccountController.swift */; };
+		E4EF323522F422EF00708323 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF323422F422EF00708323 /* ApiController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E42913A122F4718F000639A5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		E42913A422F483C9000639A5 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
+		E42913A622F485A4000639A5 /* AuthWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWindowController.swift; sourceTree = "<group>"; };
 		E42B1B8B22F3240500DCCB35 /* macreddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macreddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +43,8 @@
 		E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macredditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42B1BA122F3240700DCCB35 /* macredditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macredditTests.swift; sourceTree = "<group>"; };
 		E42B1BA322F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4EF323422F422EF00708323 /* RedditApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditApiController.swift; sourceTree = "<group>"; };
+		E4951DBF22F4C6D400F050D8 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		E4EF323422F422EF00708323 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E429139D22F443B9000639A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4EF323422F422EF00708323 /* ApiController.swift */,
+				E4951DBF22F4C6D400F050D8 /* AccountController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E429139E22F443C3000639A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E42913A322F48378000639A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4951DBE22F4C6BA00F050D8 /* Auth */,
+				E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */,
+				E42913A122F4718F000639A5 /* MainWindowController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E42B1B8222F3240500DCCB35 = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +113,8 @@
 		E42B1B8D22F3240500DCCB35 /* macreddit */ = {
 			isa = PBXGroup;
 			children = (
+				E42913A322F48378000639A5 /* Controllers */,
 				E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */,
-				E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */,
 				E42B1B9222F3240600DCCB35 /* Assets.xcassets */,
 				E42B1B9422F3240600DCCB35 /* Main.storyboard */,
 				E42B1B9722F3240700DCCB35 /* Info.plist */,
@@ -98,10 +132,20 @@
 			path = macredditTests;
 			sourceTree = "<group>";
 		};
+		E4951DBE22F4C6BA00F050D8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E42913A422F483C9000639A5 /* AuthWebViewController.swift */,
+				E42913A622F485A4000639A5 /* AuthWindowController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		E4EF323322F4228700708323 /* redditapi */ = {
 			isa = PBXGroup;
 			children = (
-				E4EF323422F422EF00708323 /* RedditApiController.swift */,
+				E429139E22F443C3000639A5 /* Models */,
+				E429139D22F443B9000639A5 /* Controllers */,
 			);
 			path = redditapi;
 			sourceTree = "<group>";
@@ -156,6 +200,11 @@
 				TargetAttributes = {
 					E42B1B8A22F3240500DCCB35 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					E42B1B9C22F3240700DCCB35 = {
 						CreatedOnToolsVersion = 10.3;
@@ -206,9 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4951DC022F4C6D400F050D8 /* AccountController.swift in Sources */,
 				E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */,
+				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
 				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
-				E4EF323522F422EF00708323 /* RedditApiController.swift in Sources */,
+				E42913A222F4718F000639A5 /* MainWindowController.swift in Sources */,
+				E42913A522F483C9000639A5 /* AuthWebViewController.swift in Sources */,
+				E4EF323522F422EF00708323 /* ApiController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

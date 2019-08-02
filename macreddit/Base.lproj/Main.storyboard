@@ -2,9 +2,59 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Window Controller-->
+        <scene sceneID="zvT-Ur-iKN">
+            <objects>
+                <windowController storyboardIdentifier="AuthWindowController" id="nPu-5q-m9L" customClass="AuthWindowController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Add new account" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="JTh-FT-O4E">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="730" height="500"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="nPu-5q-m9L" id="tPY-g1-UTf"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="HoX-Zj-8Xj" kind="relationship" relationship="window.shadowedContentViewController" id="yQ1-mQ-ImM"/>
+                    </connections>
+                </windowController>
+                <customObject id="DsP-jX-xoR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-497"/>
+        </scene>
+        <!--Auth Web View Controller-->
+        <scene sceneID="QJz-Li-xs1">
+            <objects>
+                <viewController id="HoX-Zj-8Xj" customClass="AuthWebViewController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3Zk-4m-tLE">
+                        <rect key="frame" x="0.0" y="0.0" width="730" height="500"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSc-S4-gYf">
+                                <rect key="frame" x="0.0" y="0.0" width="730" height="500"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                                <connections>
+                                    <outlet property="navigationDelegate" destination="HoX-Zj-8Xj" id="JSC-MV-9Cc"/>
+                                </connections>
+                            </wkWebView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="zSc-S4-gYf" id="939-oi-VBi"/>
+                    </connections>
+                </viewController>
+                <customObject id="IOS-FI-vx0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="-449"/>
+        </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
@@ -683,10 +733,10 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="macreddit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="720" height="405"/>
+                        <rect key="contentRect" x="196" y="240" width="1090" height="630"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="9CA92925-6300-4B79-8C9C-E32209B55F12" centeredItem="NcV-VK-ImG" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="small" id="j4H-72-i7E">
                             <allowedToolbarItems>
@@ -694,9 +744,9 @@
                                 <toolbarItem implicitItemIdentifier="AFF5135D-CF43-412C-ACEC-E883A6B608CF" label="Home" paletteLabel="" sizingBehavior="auto" id="NcV-VK-ImG">
                                     <nil key="toolTip"/>
                                     <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="JIW-v1-SIQ">
-                                        <rect key="frame" x="0.0" y="14" width="37" height="17"/>
+                                        <rect key="frame" x="0.0" y="14" width="44" height="17"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="Xgc-gp-Rv5">
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Home" id="Xgc-gp-Rv5">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -750,7 +800,7 @@
                                         </segmentedCell>
                                     </segmentedControl>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="210487E4-78A8-49FB-A145-3F2C7BD7865A" label="Custom View" paletteLabel="Custom View" image="NSUserGuest" id="etZ-Sn-f6h">
+                                <toolbarItem implicitItemIdentifier="210487E4-78A8-49FB-A145-3F2C7BD7865A" label="ProfileView" paletteLabel="ProfileView" image="NSUserGuest" id="etZ-Sn-f6h">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="35" height="25"/>
                                     <size key="maxSize" width="127" height="25"/>
@@ -762,13 +812,16 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="profileButtonClickedWithSender:" target="B8D-0N-5wS" id="ZSE-QF-FOK"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="873FDDDF-A110-4851-ADAD-CCDA45E4D5F9" label="SortToggle" paletteLabel="SortToggle" image="NSPathTemplate" sizingBehavior="auto" id="ZmJ-bE-yZN">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="ze0-e5-MZ5">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Textured Rounded" bezelStyle="texturedRounded" image="NSPathTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SWG-JJ-8Yn">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSPathTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SWG-JJ-8Yn">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -806,7 +859,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85" y="196.5"/>
+            <point key="canvasLocation" x="103" y="321"/>
         </scene>
         <!--Main Split View Controller-->
         <scene sceneID="0gh-xm-cUW">
@@ -831,33 +884,33 @@
                 </splitViewController>
                 <customObject id="75L-Jb-Gc1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="695"/>
+            <point key="canvasLocation" x="26" y="908"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Wd8-9U-XWE">
             <objects>
                 <viewController id="kX3-rs-SOx" sceneMemberID="viewController">
                     <view key="view" id="65K-K0-SPo">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="660"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
                 <customObject id="cpu-Fi-BLt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117" y="1143"/>
+            <point key="canvasLocation" x="-448" y="1491"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TXh-jf-AXN">
             <objects>
                 <viewController id="dkI-AY-VJe" sceneMemberID="viewController">
                     <view key="view" id="C8n-jA-nqY">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="927" height="660"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
                 <customObject id="Stg-5x-4aR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589" y="1131"/>
+            <point key="canvasLocation" x="196" y="1491"/>
         </scene>
     </scenes>
     <resources>
