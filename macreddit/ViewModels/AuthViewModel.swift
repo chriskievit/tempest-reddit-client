@@ -33,4 +33,19 @@ class AuthViewModel {
             }
         }
     }
+    
+    func getAnonymousToken() {
+        let deviceId = UUID().uuidString
+        
+        AuthController().getAnonymousOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, deviceId: deviceId) { (result: Result<AccessToken, RequestError>) in
+            switch result {
+            case .success(let token):
+                print(token.accessToken)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
 }
