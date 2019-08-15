@@ -18,6 +18,11 @@
 		E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676323055CEE004BCBB3 /* AccountsViewController.swift */; };
 		E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767662305838A004BCBB3 /* ApplicationContext.swift */; };
 		E48767692305853E004BCBB3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767682305853E004BCBB3 /* Session.swift */; };
+		E487676B230595A9004BCBB3 /* ListingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676A230595A9004BCBB3 /* ListingController.swift */; };
+		E487676D2305A198004BCBB3 /* RedditListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676C2305A198004BCBB3 /* RedditListing.swift */; };
+		E487676F2305A3EC004BCBB3 /* RedditDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676E2305A3EC004BCBB3 /* RedditDataResponse.swift */; };
+		E48767712305A3FF004BCBB3 /* RedditEntityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767702305A3FF004BCBB3 /* RedditEntityResponse.swift */; };
+		E48767732305A407004BCBB3 /* RedditEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767722305A407004BCBB3 /* RedditEntity.swift */; };
 		E4951DC022F4C6D400F050D8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AuthController.swift */; };
 		E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */; };
 		E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC422F4D04700F050D8 /* AccessToken.swift */; };
@@ -51,6 +56,11 @@
 		E487676323055CEE004BCBB3 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		E48767662305838A004BCBB3 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		E48767682305853E004BCBB3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		E487676A230595A9004BCBB3 /* ListingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingController.swift; sourceTree = "<group>"; };
+		E487676C2305A198004BCBB3 /* RedditListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListing.swift; sourceTree = "<group>"; };
+		E487676E2305A3EC004BCBB3 /* RedditDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditDataResponse.swift; sourceTree = "<group>"; };
+		E48767702305A3FF004BCBB3 /* RedditEntityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditEntityResponse.swift; sourceTree = "<group>"; };
+		E48767722305A407004BCBB3 /* RedditEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditEntity.swift; sourceTree = "<group>"; };
 		E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
 		E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
 		E4951DBF22F4C6D400F050D8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
@@ -82,6 +92,7 @@
 			children = (
 				E4EF323422F422EF00708323 /* ApiController.swift */,
 				E4951DBF22F4C6D400F050D8 /* AuthController.swift */,
+				E487676A230595A9004BCBB3 /* ListingController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				E4951DC422F4D04700F050D8 /* AccessToken.swift */,
+				E487676C2305A198004BCBB3 /* RedditListing.swift */,
+				E487676E2305A3EC004BCBB3 /* RedditDataResponse.swift */,
+				E48767702305A3FF004BCBB3 /* RedditEntityResponse.swift */,
+				E48767722305A407004BCBB3 /* RedditEntity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,12 +317,17 @@
 				E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */,
 				E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */,
 				E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */,
+				E487676D2305A198004BCBB3 /* RedditListing.swift in Sources */,
+				E487676B230595A9004BCBB3 /* ListingController.swift in Sources */,
 				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
+				E487676F2305A3EC004BCBB3 /* RedditDataResponse.swift in Sources */,
 				E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */,
 				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
 				E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */,
 				E48767692305853E004BCBB3 /* Session.swift in Sources */,
+				E48767732305A407004BCBB3 /* RedditEntity.swift in Sources */,
 				E42913A222F4718F000639A5 /* MainWindowController.swift in Sources */,
+				E48767712305A3FF004BCBB3 /* RedditEntityResponse.swift in Sources */,
 				E42913A522F483C9000639A5 /* AuthWebViewController.swift in Sources */,
 				E4EF323522F422EF00708323 /* ApiController.swift in Sources */,
 			);
