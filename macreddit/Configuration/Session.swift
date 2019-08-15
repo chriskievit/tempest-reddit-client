@@ -26,25 +26,11 @@ class Session {
     func authenticate(code: String?, completion: @escaping (Result<Bool, RequestError>) -> Void) {
         if let code = code {
             AuthController.getOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, code: code, isRefreshToken: false, result: { (result: Result<AccessToken, RequestError>) in
-                switch result {
-                case .success(_):
-                    completion(.success(true))
-                    break;
-                case .failure(let error):
-                    completion(.failure(error))
-                    break;
-                }
+                self.validateAuthTokenResult(result: result, completion: completion)
             })
         } else {
             AuthController.getAnonymousOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, deviceId: ApplicationContext.shared.deviceId, result: { (result: Result<AccessToken, RequestError>) in
-                switch result {
-                case .success(_):
-                    completion(.success(true))
-                    break;
-                case .failure(let error):
-                    completion(.failure(error))
-                    break;
-                }
+                self.validateAuthTokenResult(result: result, completion: completion)
             })
         }
     }
@@ -62,6 +48,17 @@ class Session {
             AuthController.revokeToken(clientId: getClientId(), token: token.accessToken, tokenType: token.tokenType, result: completion)
         } else {
             completion(.success(true))
+        }
+    }
+    
+    private func validateAuthTokenResult(result: Result<AccessToken, RequestError>, completion: @escaping (Result<Bool, RequestError>) -> Void) {
+        switch result {
+        case .success(_):
+            completion(.success(true))
+            break;
+        case .failure(let error):
+            completion(.failure(error))
+            break;
         }
     }
 }
