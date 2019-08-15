@@ -15,6 +15,7 @@
 		E42B1B9322F3240600DCCB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9222F3240600DCCB35 /* Assets.xcassets */; };
 		E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9422F3240600DCCB35 /* Main.storyboard */; };
 		E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* macredditTests.swift */; };
+		E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676323055CEE004BCBB3 /* AccountsViewController.swift */; };
 		E4951DC022F4C6D400F050D8 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AccountController.swift */; };
 		E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */; };
 		E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC422F4D04700F050D8 /* AccessToken.swift */; };
@@ -45,6 +46,9 @@
 		E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macredditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42B1BA122F3240700DCCB35 /* macredditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macredditTests.swift; sourceTree = "<group>"; };
 		E42B1BA322F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E487676323055CEE004BCBB3 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
+		E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
 		E4951DBF22F4C6D400F050D8 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E4951DC422F4D04700F050D8 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		E42913A322F48378000639A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E487676223055CD8004BCBB3 /* Account */,
 				E4951DBE22F4C6BA00F050D8 /* Auth */,
 				E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */,
 				E42913A122F4718F000639A5 /* MainWindowController.swift */,
@@ -125,6 +130,8 @@
 				E42B1B9422F3240600DCCB35 /* Main.storyboard */,
 				E42B1B9722F3240700DCCB35 /* Info.plist */,
 				E42B1B9822F3240700DCCB35 /* macreddit.entitlements */,
+				E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */,
+				E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */,
 			);
 			path = macreddit;
 			sourceTree = "<group>";
@@ -136,6 +143,14 @@
 				E42B1BA322F3240700DCCB35 /* Info.plist */,
 			);
 			path = macredditTests;
+			sourceTree = "<group>";
+		};
+		E487676223055CD8004BCBB3 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				E487676323055CEE004BCBB3 /* AccountsViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		E4951DBE22F4C6BA00F050D8 /* Auth */ = {
@@ -271,6 +286,7 @@
 			files = (
 				E4951DC022F4C6D400F050D8 /* AccountController.swift in Sources */,
 				E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */,
+				E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */,
 				E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */,
 				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
 				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
@@ -313,6 +329,7 @@
 /* Begin XCBuildConfiguration section */
 		E42B1BA422F3240700DCCB35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -374,6 +391,7 @@
 		};
 		E42B1BA522F3240700DCCB35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
