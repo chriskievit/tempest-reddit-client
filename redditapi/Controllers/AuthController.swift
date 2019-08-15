@@ -1,5 +1,5 @@
 //
-//  AccountController.swift
+//  AuthController.swift
 //  macreddit
 //
 //  Created by Chris on 02/08/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AccountController: ApiController {
+class AuthController: ApiController {
     static func generateAuthUrl(clientId: String, redirectUrl: String, scopes: [String]) -> URL? {
         let state: String = UUID().uuidString
         let redirectUri = redirectUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

@@ -18,11 +18,11 @@ class AuthViewModel {
     }
     
     func authUrl() -> URL? {
-        return AccountController.generateAuthUrl(clientId: getClientId(), redirectUrl: _callbackUrl, scopes: _scopes)
+        return AuthController.generateAuthUrl(clientId: getClientId(), redirectUrl: _callbackUrl, scopes: _scopes)
     }
     
     func validateToken(code: String) {
-        AccountController().getOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, code: code, isRefreshToken: false) { (result: Result<AccessToken, RequestError>) in
+        AuthController().getOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, code: code, isRefreshToken: false) { (result: Result<AccessToken, RequestError>) in
             switch result {
                 case .success(let token):
                     print(token.accessToken)

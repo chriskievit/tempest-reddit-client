@@ -16,7 +16,7 @@
 		E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9422F3240600DCCB35 /* Main.storyboard */; };
 		E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* macredditTests.swift */; };
 		E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676323055CEE004BCBB3 /* AccountsViewController.swift */; };
-		E4951DC022F4C6D400F050D8 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AccountController.swift */; };
+		E4951DC022F4C6D400F050D8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AuthController.swift */; };
 		E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */; };
 		E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC422F4D04700F050D8 /* AccessToken.swift */; };
 		E4EF323522F422EF00708323 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF323422F422EF00708323 /* ApiController.swift */; };
@@ -49,7 +49,7 @@
 		E487676323055CEE004BCBB3 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
 		E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
-		E4951DBF22F4C6D400F050D8 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		E4951DBF22F4C6D400F050D8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E4951DC422F4D04700F050D8 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		E4EF323422F422EF00708323 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				E4EF323422F422EF00708323 /* ApiController.swift */,
-				E4951DBF22F4C6D400F050D8 /* AccountController.swift */,
+				E4951DBF22F4C6D400F050D8 /* AuthController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4951DC022F4C6D400F050D8 /* AccountController.swift in Sources */,
+				E4951DC022F4C6D400F050D8 /* AuthController.swift in Sources */,
 				E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */,
 				E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */,
 				E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */,
