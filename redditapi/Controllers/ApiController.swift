@@ -20,7 +20,7 @@ protocol ApiController {
 }
 
 extension ApiController {
-    func performGetRequest<T: Codable>(url: String, result: @escaping (Result<T, RequestError>) -> Void) {
+    static func performGetRequest<T: Codable>(url: String, result: @escaping (Result<T, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -29,7 +29,7 @@ extension ApiController {
         performRequest(request: createRequest(url: url, method: "GET"), result: result)
     }
     
-    func performPostRequest<Tresult: Codable, Tparam: Codable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void) {
+    static func performPostRequest<Tresult: Codable, Tparam: Codable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -43,7 +43,7 @@ extension ApiController {
         performRequest(request: createRequest(url: url, method: "POST", parameters: jsonData), result: result)
     }
     
-    func performFormPostRequest<Tresult: Codable>(url: String, data: [String: String], additionalHeaders: [String: String], result: @escaping (Result<Tresult, RequestError>) -> Void) {
+    static func performFormPostRequest<Tresult: Codable>(url: String, data: [String: String], additionalHeaders: [String: String]?, result: @escaping (Result<Tresult, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -54,7 +54,7 @@ extension ApiController {
         
         var request = createRequest(url: url, method: "POST", parameters: postData, contentType: "application/x-www-form-urlencoded")
         
-        additionalHeaders.forEach { (header, value) in
+        additionalHeaders?.forEach { (header, value) in
             if header != "Content-Type" {
                 request.addValue(value, forHTTPHeaderField: header)
             }
@@ -63,7 +63,7 @@ extension ApiController {
         performRequest(request: request, result: result)
     }
     
-    private func performRequest<T: Codable>(request: URLRequest, result: @escaping (Result<T, RequestError>) -> Void) {
+    private static func performRequest<T: Codable>(request: URLRequest, result: @escaping (Result<T, RequestError>) -> Void) {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
                 result(.failure(.serverError))
@@ -85,7 +85,7 @@ extension ApiController {
         }.resume()
     }
     
-    private func createRequest(url: URL, method: String, parameters: Data? = nil, contentType: String = "application/json") -> URLRequest {
+    private static func createRequest(url: URL, method: String, parameters: Data? = nil, contentType: String = "application/json") -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method
         
@@ -99,7 +99,7 @@ extension ApiController {
         return request
     }
     
-    private func parseFormData(formData: [String: String]) -> String {
+    private static func parseFormData(formData: [String: String]) -> String {
         var pairs: [String] = [String]()
         formData.forEach { (key, value) in
             pairs.append(String(format: "%@=%@", key, value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!))
@@ -108,11 +108,11 @@ extension ApiController {
         return pairs.joined(separator: "&")
     }
     
-    private func encode<T: Codable>(data: T) -> Data? {
+    private static func encode<T: Codable>(data: T) -> Data? {
         return try? JSONEncoder().encode(data)
     }
     
-    private func decode<T: Codable>(jsonString: String) -> T? {
+    private static func decode<T: Codable>(jsonString: String) -> T? {
         guard !jsonString.isEmpty else {
             return nil
         }

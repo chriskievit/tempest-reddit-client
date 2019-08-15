@@ -8,44 +8,12 @@
 
 import Foundation
 
-class AuthViewModel {
-    private let _callbackUrl = "brc://validate"
-    private let _scopes = ["read", "mysubreddits", "account"]
-    
-    private func getClientId() -> String {
-        let clientId: String = Bundle.main.infoDictionary?["ClientId"] as! String
-        return clientId.replacingOccurrences(of: "\"", with: "")
-    }
-    
+class AuthViewModel {    
     func authUrl() -> URL? {
-        return AuthController.generateAuthUrl(clientId: getClientId(), redirectUrl: _callbackUrl, scopes: _scopes)
+        return ApplicationContext.shared.session.getAuthUrl()
     }
     
-    func validateToken(code: String) {
-        AuthController().getOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, code: code, isRefreshToken: false) { (result: Result<AccessToken, RequestError>) in
-            switch result {
-                case .success(let token):
-                    print(token.accessToken)
-                    break
-                case .failure(let error):
-                    print(error)
-                    break
-            }
-        }
-    }
-    
-    func getAnonymousToken() {
-        let deviceId = UUID().uuidString
-        
-        AuthController().getAnonymousOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, deviceId: deviceId) { (result: Result<AccessToken, RequestError>) in
-            switch result {
-            case .success(let token):
-                print(token.accessToken)
-                break
-            case .failure(let error):
-                print(error)
-                break
-            }
-        }
+    func authenticate(code: String, completion: @escaping (Result<Bool, RequestError>) -> Void) -> Void {
+        return ApplicationContext.shared.session.authenticate(code: code, completion: completion)
     }
 }

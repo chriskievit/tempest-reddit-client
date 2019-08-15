@@ -16,6 +16,8 @@
 		E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9422F3240600DCCB35 /* Main.storyboard */; };
 		E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* macredditTests.swift */; };
 		E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676323055CEE004BCBB3 /* AccountsViewController.swift */; };
+		E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767662305838A004BCBB3 /* ApplicationContext.swift */; };
+		E48767692305853E004BCBB3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767682305853E004BCBB3 /* Session.swift */; };
 		E4951DC022F4C6D400F050D8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AuthController.swift */; };
 		E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */; };
 		E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC422F4D04700F050D8 /* AccessToken.swift */; };
@@ -47,6 +49,8 @@
 		E42B1BA122F3240700DCCB35 /* macredditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macredditTests.swift; sourceTree = "<group>"; };
 		E42B1BA322F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E487676323055CEE004BCBB3 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		E48767662305838A004BCBB3 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
+		E48767682305853E004BCBB3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
 		E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
 		E4951DBF22F4C6D400F050D8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		E42B1B8D22F3240500DCCB35 /* macreddit */ = {
 			isa = PBXGroup;
 			children = (
+				E487676523058363004BCBB3 /* Configuration */,
 				E4951DC122F4CD5F00F050D8 /* ViewModels */,
 				E42913A322F48378000639A5 /* Controllers */,
 				E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */,
@@ -151,6 +156,15 @@
 				E487676323055CEE004BCBB3 /* AccountsViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		E487676523058363004BCBB3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E48767662305838A004BCBB3 /* ApplicationContext.swift */,
+				E48767682305853E004BCBB3 /* Session.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		E4951DBE22F4C6BA00F050D8 /* Auth */ = {
@@ -289,8 +303,10 @@
 				E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */,
 				E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */,
 				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
+				E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */,
 				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
 				E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */,
+				E48767692305853E004BCBB3 /* Session.swift in Sources */,
 				E42913A222F4718F000639A5 /* MainWindowController.swift in Sources */,
 				E42913A522F483C9000639A5 /* AuthWebViewController.swift in Sources */,
 				E4EF323522F422EF00708323 /* ApiController.swift in Sources */,

@@ -29,7 +29,16 @@ class AuthWebViewController: NSViewController, WKNavigationDelegate {
             let query: URLQueryItem? = urlComponents?.queryItems?.first(where: { $0.name == "code" })
             
             if let query = query {
-                viewModel.validateToken(code: query.value!)
+                viewModel.authenticate(code: query.value!) { (result: Result<Bool, RequestError>) in
+                    switch result {
+                    case .success(_):
+                        self.handleSuccessfulAuth()
+                        break;
+                    case .failure(let error):
+                        self.handleFailedAuth(error: error)
+                        break;
+                    }
+                }
                 decisionHandler(.cancel)
                 return
             }
@@ -37,4 +46,7 @@ class AuthWebViewController: NSViewController, WKNavigationDelegate {
         
         decisionHandler(.allow)
     }
+    
+    private func handleSuccessfulAuth() { }
+    private func handleFailedAuth(error: Error) { }
 }
