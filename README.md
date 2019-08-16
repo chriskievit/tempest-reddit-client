@@ -6,6 +6,10 @@ This project is part Reddit API wrapper, part Reddit client for MacOS. I've star
 
 * [Swift 5.0.2](https://swift.org/getting-started/) - The framework used
 
+## Installation
+
+Be sure to add your own client ID and return url for your Reddit API app to the Config.xcconfig files in the application.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to this project.
