@@ -53,7 +53,8 @@ class Session {
     
     private func validateAuthTokenResult(result: Result<AccessToken, RequestError>, completion: @escaping (Result<Bool, RequestError>) -> Void) {
         switch result {
-        case .success(_):
+        case .success(let token):
+            self.setAuthToken(token: token)
             completion(.success(true))
             break;
         case .failure(let error):

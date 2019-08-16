@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AccessToken: Codable {
+class AccessToken: Decodable {
     var accessToken: String
     var tokenType: String
     var expiresIn: Int

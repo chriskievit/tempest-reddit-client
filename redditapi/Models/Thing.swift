@@ -8,4 +8,4 @@
 
 import Foundation
 
-class RedditEntity: Codable { }
+class Thing: Decodable { }

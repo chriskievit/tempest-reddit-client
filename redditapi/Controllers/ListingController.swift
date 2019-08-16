@@ -11,7 +11,7 @@ import Foundation
 protocol ListingController : ApiController { }
 
 extension ListingController {
-    static func getListing<T: RedditListing<RedditEntity>>(url: String, before: String?, after: String?, count: Int?, completion: @escaping (Result<T, RequestError>) -> Void) {
+    static func getListing<T: Listing<Thing>>(url: String, before: String?, after: String?, count: Int?, completion: @escaping (Result<T, RequestError>) -> Void) {
         if let before = before, !before.isEmpty,
             let after = after, !after.isEmpty {
             completion(.failure(.parameterEncodingError))

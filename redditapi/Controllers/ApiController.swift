@@ -20,7 +20,7 @@ protocol ApiController {
 }
 
 extension ApiController {
-    static func performGetRequest<T: Codable>(url: String, result: @escaping (Result<T, RequestError>) -> Void) {
+    static func performGetRequest<T: Decodable>(url: String, result: @escaping (Result<T, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -29,7 +29,7 @@ extension ApiController {
         performRequest(request: createRequest(url: url, method: "GET"), result: result)
     }
     
-    static func performPostRequest<Tresult: Codable, Tparam: Codable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void) {
+    static func performPostRequest<Tresult: Decodable, Tparam: Encodable>(url: String, data: Tparam, result: @escaping (Result<Tresult, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -43,7 +43,7 @@ extension ApiController {
         performRequest(request: createRequest(url: url, method: "POST", parameters: jsonData), result: result)
     }
     
-    static func performFormPostRequest<Tresult: Codable>(url: String, data: [String: String], additionalHeaders: [String: String]?, result: @escaping (Result<Tresult, RequestError>) -> Void) {
+    static func performFormPostRequest<Tresult: Decodable>(url: String, data: [String: String], additionalHeaders: [String: String]?, result: @escaping (Result<Tresult, RequestError>) -> Void) {
         guard let url = URL(string: url) else {
             result(.failure(.urlFormatError))
             return
@@ -63,7 +63,7 @@ extension ApiController {
         performRequest(request: request, result: result)
     }
     
-    private static func performRequest<T: Codable>(request: URLRequest, result: @escaping (Result<T, RequestError>) -> Void) {
+    private static func performRequest<T: Decodable>(request: URLRequest, result: @escaping (Result<T, RequestError>) -> Void) {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
                 result(.failure(.serverError))
@@ -108,11 +108,11 @@ extension ApiController {
         return pairs.joined(separator: "&")
     }
     
-    private static func encode<T: Codable>(data: T) -> Data? {
+    private static func encode<T: Encodable>(data: T) -> Data? {
         return try? JSONEncoder().encode(data)
     }
     
-    private static func decode<T: Codable>(jsonString: String) -> T? {
+    private static func decode<T: Decodable>(jsonString: String) -> T? {
         guard !jsonString.isEmpty else {
             return nil
         }
