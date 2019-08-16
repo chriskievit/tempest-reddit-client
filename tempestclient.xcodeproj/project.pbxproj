@@ -10,6 +10,8 @@
 		E417F75C2307445E00FFE9A4 /* SubredditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417F75B2307445E00FFE9A4 /* SubredditViewController.swift */; };
 		E417F75E2307455D00FFE9A4 /* SubredditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417F75D2307455D00FFE9A4 /* SubredditViewModel.swift */; };
 		E417F760230746A300FFE9A4 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417F75F230746A300FFE9A4 /* ListingViewModel.swift */; };
+		E417F76223074C6700FFE9A4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E417F76123074C6700FFE9A4 /* README.md */; };
+		E417F76423074DC400FFE9A4 /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = E417F76323074DC400FFE9A4 /* CONTRIBUTING.md */; };
 		E42913A222F4718F000639A5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A122F4718F000639A5 /* MainWindowController.swift */; };
 		E42913A522F483C9000639A5 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A422F483C9000639A5 /* AuthWebViewController.swift */; };
 		E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A622F485A4000639A5 /* AuthWindowController.swift */; };
@@ -46,6 +48,8 @@
 		E417F75B2307445E00FFE9A4 /* SubredditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditViewController.swift; sourceTree = "<group>"; };
 		E417F75D2307455D00FFE9A4 /* SubredditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditViewModel.swift; sourceTree = "<group>"; };
 		E417F75F230746A300FFE9A4 /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
+		E417F76123074C6700FFE9A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E417F76323074DC400FFE9A4 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		E42913A122F4718F000639A5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		E42913A422F483C9000639A5 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
 		E42913A622F485A4000639A5 /* AuthWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWindowController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		E42B1B8222F3240500DCCB35 = {
 			isa = PBXGroup;
 			children = (
+				E417F76323074DC400FFE9A4 /* CONTRIBUTING.md */,
+				E417F76123074C6700FFE9A4 /* README.md */,
 				E4EF323322F4228700708323 /* redditapi */,
 				E42B1B8D22F3240500DCCB35 /* macreddit */,
 				E42B1BA022F3240700DCCB35 /* macredditTests */,
@@ -295,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E42B1B8622F3240500DCCB35 /* Build configuration list for PBXProject "macreddit" */;
+			buildConfigurationList = E42B1B8622F3240500DCCB35 /* Build configuration list for PBXProject "tempestclient" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,7 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E417F76223074C6700FFE9A4 /* README.md in Resources */,
 				E42B1B9322F3240600DCCB35 /* Assets.xcassets in Resources */,
+				E417F76423074DC400FFE9A4 /* CONTRIBUTING.md in Resources */,
 				E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +597,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E42B1B8622F3240500DCCB35 /* Build configuration list for PBXProject "macreddit" */ = {
+		E42B1B8622F3240500DCCB35 /* Build configuration list for PBXProject "tempestclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E42B1BA422F3240700DCCB35 /* Debug */,
