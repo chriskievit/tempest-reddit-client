@@ -1,6 +1,6 @@
 # Tempest - another Reddit client
 
-This project is part Reddit API wrapper, part Reddit client for MacOS. I've started this project because I couldn't get used to the Reddit redesign and because I wanted to learn some Swift. Because this is my first Swift project, my .NET background may seep through in my design decisions, but be sure to call me on that. Feel free to contribute (see [Contributing])
+This project is part Reddit API wrapper, part Reddit client for MacOS. I've started this project because I couldn't get used to the Reddit redesign and because I wanted to learn some Swift. Because this is my first Swift project, my .NET background may seep through in my design decisions, but be sure to call me on that.
 
 ## Built With
 
@@ -8,7 +8,7 @@ This project is part Reddit API wrapper, part Reddit client for MacOS. I've star
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to this project.
 
 ## Versioning
 
@@ -16,13 +16,13 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Chris Kievit** - *Initial work* - [ChrisKievit](https://github.com/chriskievit)
+* **Chris Kievit** - *Initial work* - [chriskievit](https://github.com/chriskievit)
 
 See also the list of [contributors](https://github.com/chriskievit/tempest-reddit-client/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
