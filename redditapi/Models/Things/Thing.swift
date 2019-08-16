@@ -8,4 +8,7 @@
 
 import Foundation
 
-class Thing: Decodable { }
+class Thing: Decodable {
+    var name: String
+    var id: String
+}
