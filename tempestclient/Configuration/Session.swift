@@ -9,8 +9,11 @@
 import Foundation
 
 class Session {
-    private let _callbackUrl = "brc://validate"
     private let _scopes = ["read", "mysubreddits", "account"]
+    
+    private func getReturnUrl() -> String {
+        return Bundle.main.infoDictionary?["ReturnUrl"] as! String
+    }
     
     private func getClientId() -> String {
         let clientId: String = Bundle.main.infoDictionary?["ClientId"] as! String
@@ -25,11 +28,11 @@ class Session {
     
     func authenticate(code: String?, completion: @escaping (Result<Bool, RequestError>) -> Void) {
         if let code = code {
-            AuthController.getOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, code: code, isRefreshToken: false, result: { (result: Result<AccessToken, RequestError>) in
+            AuthController.getOAuthToken(clientId: getClientId(), redirectUrl: getReturnUrl(), code: code, isRefreshToken: false, result: { (result: Result<AccessToken, RequestError>) in
                 self.validateAuthTokenResult(result: result, completion: completion)
             })
         } else {
-            AuthController.getAnonymousOAuthToken(clientId: getClientId(), redirectUrl: _callbackUrl, deviceId: ApplicationContext.shared.deviceId, result: { (result: Result<AccessToken, RequestError>) in
+            AuthController.getAnonymousOAuthToken(clientId: getClientId(), redirectUrl: getReturnUrl(), deviceId: ApplicationContext.shared.deviceId, result: { (result: Result<AccessToken, RequestError>) in
                 self.validateAuthTokenResult(result: result, completion: completion)
             })
         }
@@ -41,7 +44,7 @@ class Session {
     }
     
     func getAuthUrl() -> URL? {
-        return AuthController.generateAuthUrl(clientId: getClientId(), redirectUrl: _callbackUrl, scopes: _scopes)
+        return AuthController.generateAuthUrl(clientId: getClientId(), redirectUrl: getReturnUrl(), scopes: _scopes)
     }
     
     func logout(completion: @escaping (Result<Bool, RequestError>) -> Void) {
