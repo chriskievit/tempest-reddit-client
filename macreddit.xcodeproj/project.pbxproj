@@ -96,9 +96,8 @@
 		E429139E22F443C3000639A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E45DFD062306F49200ABBC29 /* Things */,
 				E4951DC422F4D04700F050D8 /* AccessToken.swift */,
-				E487676C2305A198004BCBB3 /* Listing.swift */,
-				E48767722305A407004BCBB3 /* Thing.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +156,15 @@
 				E42B1BA322F3240700DCCB35 /* Info.plist */,
 			);
 			path = macredditTests;
+			sourceTree = "<group>";
+		};
+		E45DFD062306F49200ABBC29 /* Things */ = {
+			isa = PBXGroup;
+			children = (
+				E48767722305A407004BCBB3 /* Thing.swift */,
+				E487676C2305A198004BCBB3 /* Listing.swift */,
+			);
+			path = Things;
 			sourceTree = "<group>";
 		};
 		E487676223055CD8004BCBB3 /* Account */ = {

@@ -20,7 +20,7 @@ class Session {
     private var _authToken: AccessToken?
     
     func isAuthenticated() -> Bool {
-        return _authToken != nil
+        return _authToken != nil && _authToken!.isValid()
     }
     
     func authenticate(code: String?, completion: @escaping (Result<Bool, RequestError>) -> Void) {
@@ -36,6 +36,7 @@ class Session {
     }
     
     func setAuthToken(token: AccessToken) {
+        token.setExpiry()
         _authToken = token
     }
     
