@@ -9,6 +9,11 @@
 import Foundation
 
 class Thing: Decodable {
-    var name: String
-    var id: String
+    var name: String = ""
+    var id: String = ""
+    
+    init(withName name: String, withId id: String) {
+        self.name = name
+        self.id = id
+    }
 }

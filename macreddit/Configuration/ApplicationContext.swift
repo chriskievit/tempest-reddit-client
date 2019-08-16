@@ -11,10 +11,17 @@ import Foundation
 class ApplicationContext {
     static let shared = ApplicationContext()
     
-    let session: Session!
+    let session: Session
     let deviceId: String = UUID().uuidString
+    
+    var currentSubreddit: Subreddit
     
     init() {
         session = Session()
+        currentSubreddit = Subreddit(withName: "all", withId: "all")
+        
+        tryLoadPreviousState()
     }
+    
+    private func tryLoadPreviousState() { }
 }

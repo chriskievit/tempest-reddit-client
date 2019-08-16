@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E417F75C2307445E00FFE9A4 /* SubredditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417F75B2307445E00FFE9A4 /* SubredditViewController.swift */; };
+		E417F75E2307455D00FFE9A4 /* SubredditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417F75D2307455D00FFE9A4 /* SubredditViewModel.swift */; };
+		E417F760230746A300FFE9A4 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417F75F230746A300FFE9A4 /* ListingViewModel.swift */; };
 		E42913A222F4718F000639A5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A122F4718F000639A5 /* MainWindowController.swift */; };
 		E42913A522F483C9000639A5 /* AuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A422F483C9000639A5 /* AuthWebViewController.swift */; };
 		E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42913A622F485A4000639A5 /* AuthWindowController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E417F75B2307445E00FFE9A4 /* SubredditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditViewController.swift; sourceTree = "<group>"; };
+		E417F75D2307455D00FFE9A4 /* SubredditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditViewModel.swift; sourceTree = "<group>"; };
+		E417F75F230746A300FFE9A4 /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		E42913A122F4718F000639A5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		E42913A422F483C9000639A5 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
 		E42913A622F485A4000639A5 /* AuthWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWindowController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E417F75A2307441000FFE9A4 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				E417F75B2307445E00FFE9A4 /* SubredditViewController.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		E429139D22F443B9000639A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,7 @@
 		E42913A322F48378000639A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E417F75A2307441000FFE9A4 /* Content */,
 				E487676223055CD8004BCBB3 /* Account */,
 				E4951DBE22F4C6BA00F050D8 /* Auth */,
 				E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */,
@@ -203,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */,
+				E417F75D2307455D00FFE9A4 /* SubredditViewModel.swift */,
+				E417F75F230746A300FFE9A4 /* ListingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -322,14 +339,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E45DFD082306FA3D00ABBC29 /* Subreddit.swift in Sources */,
+				E417F75C2307445E00FFE9A4 /* SubredditViewController.swift in Sources */,
 				E4951DC022F4C6D400F050D8 /* AuthController.swift in Sources */,
 				E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */,
 				E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */,
 				E45DFD0A2306FB4D00ABBC29 /* Post.swift in Sources */,
 				E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */,
+				E417F760230746A300FFE9A4 /* ListingViewModel.swift in Sources */,
 				E487676D2305A198004BCBB3 /* Listing.swift in Sources */,
 				E487676B230595A9004BCBB3 /* ListingController.swift in Sources */,
 				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
+				E417F75E2307455D00FFE9A4 /* SubredditViewModel.swift in Sources */,
 				E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */,
 				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
 				E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */,
