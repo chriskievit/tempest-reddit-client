@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  macreddit
+//  tempestclient
 //
 //  Created by Chris on 01/08/2019.
 //  Copyright © 2019 Tempest. All rights reserved.

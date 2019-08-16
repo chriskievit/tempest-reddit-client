@@ -1,15 +1,15 @@
 //
-//  macredditTests.swift
-//  macredditTests
+//  tempestclientTests.swift
+//  tempestclientTests
 //
 //  Created by Chris on 01/08/2019.
 //  Copyright © 2019 Tempest. All rights reserved.
 //
 
 import XCTest
-@testable import macreddit
+@testable import tempestclient
 
-class macredditTests: XCTestCase {
+class tempestclientTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

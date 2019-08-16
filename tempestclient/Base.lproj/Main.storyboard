@@ -9,7 +9,7 @@
         <!--Window Controller-->
         <scene sceneID="zvT-Ur-iKN">
             <objects>
-                <windowController storyboardIdentifier="AuthWindowController" id="nPu-5q-m9L" customClass="AuthWindowController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="AuthWindowController" id="nPu-5q-m9L" customClass="AuthWindowController" customModule="tempestclient" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Add new account" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="JTh-FT-O4E">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="245" y="301" width="730" height="500"/>
@@ -29,7 +29,7 @@
         <!--Auth Web View Controller-->
         <scene sceneID="QJz-Li-xs1">
             <objects>
-                <viewController id="HoX-Zj-8Xj" customClass="AuthWebViewController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HoX-Zj-8Xj" customClass="AuthWebViewController" customModule="tempestclient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3Zk-4m-tLE">
                         <rect key="frame" x="0.0" y="0.0" width="730" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,7 +79,7 @@
         <!--Accounts View Controller-->
         <scene sceneID="tz4-1p-mjb">
             <objects>
-                <viewController id="NVd-oo-VkI" customClass="AccountsViewController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NVd-oo-VkI" customClass="AccountsViewController" customModule="tempestclient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="j0M-SM-g28">
                         <rect key="frame" x="0.0" y="0.0" width="439" height="396"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -239,11 +239,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="macreddit" id="1Xt-HY-uBw">
+                            <menuItem title="tempestclient" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="macreddit" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="tempestclient" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About macreddit" id="5kV-Vb-QxS">
+                                        <menuItem title="About tempestclient" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -257,7 +257,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide macreddit" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide tempestclient" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -275,7 +275,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit macreddit" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit tempestclient" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -888,7 +888,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="macreddit Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="tempestclient Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -902,7 +902,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="macreddit" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="tempestclient" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -911,8 +911,8 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="macreddit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="tempestclient" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="tempestclient" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="1090" height="630"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -1040,7 +1040,7 @@
         <!--Main Split View Controller-->
         <scene sceneID="0gh-xm-cUW">
             <objects>
-                <splitViewController id="Yp6-Un-TGl" customClass="MainSplitViewController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController id="Yp6-Un-TGl" customClass="MainSplitViewController" customModule="tempestclient" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="tfh-Gc-ols"/>
                         <splitViewItem id="gnO-3K-Jep"/>
@@ -1065,7 +1065,7 @@
         <!--Subreddit View Controller-->
         <scene sceneID="Wd8-9U-XWE">
             <objects>
-                <viewController id="kX3-rs-SOx" customClass="SubredditViewController" customModule="macreddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kX3-rs-SOx" customClass="SubredditViewController" customModule="tempestclient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="65K-K0-SPo">
                         <rect key="frame" x="0.0" y="0.0" width="312" height="660"/>
                         <autoresizingMask key="autoresizingMask"/>

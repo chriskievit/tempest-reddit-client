@@ -19,7 +19,7 @@
 		E42B1B9122F3240500DCCB35 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */; };
 		E42B1B9322F3240600DCCB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9222F3240600DCCB35 /* Assets.xcassets */; };
 		E42B1B9622F3240600DCCB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B1B9422F3240600DCCB35 /* Main.storyboard */; };
-		E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* macredditTests.swift */; };
+		E42B1BA222F3240700DCCB35 /* tempestclientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* tempestclientTests.swift */; };
 		E45DFD082306FA3D00ABBC29 /* Subreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45DFD072306FA3D00ABBC29 /* Subreddit.swift */; };
 		E45DFD0A2306FB4D00ABBC29 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45DFD092306FB4D00ABBC29 /* Post.swift */; };
 		E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676323055CEE004BCBB3 /* AccountsViewController.swift */; };
@@ -40,7 +40,7 @@
 			containerPortal = E42B1B8322F3240500DCCB35 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E42B1B8A22F3240500DCCB35;
-			remoteInfo = macreddit;
+			remoteInfo = tempestclient;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,15 +53,15 @@
 		E42913A122F4718F000639A5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		E42913A422F483C9000639A5 /* AuthWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebViewController.swift; sourceTree = "<group>"; };
 		E42913A622F485A4000639A5 /* AuthWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWindowController.swift; sourceTree = "<group>"; };
-		E42B1B8B22F3240500DCCB35 /* macreddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macreddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B1B8B22F3240500DCCB35 /* tempestclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tempestclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42B1B8E22F3240500DCCB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E42B1B9022F3240500DCCB35 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		E42B1B9222F3240600DCCB35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E42B1B9522F3240600DCCB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E42B1B9722F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E42B1B9822F3240700DCCB35 /* macreddit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macreddit.entitlements; sourceTree = "<group>"; };
-		E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macredditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E42B1BA122F3240700DCCB35 /* macredditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macredditTests.swift; sourceTree = "<group>"; };
+		E42B1B9822F3240700DCCB35 /* tempestclient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tempestclient.entitlements; sourceTree = "<group>"; };
+		E42B1B9D22F3240700DCCB35 /* tempestclientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tempestclientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B1BA122F3240700DCCB35 /* tempestclientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempestclientTests.swift; sourceTree = "<group>"; };
 		E42B1BA322F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45DFD072306FA3D00ABBC29 /* Subreddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subreddit.swift; sourceTree = "<group>"; };
 		E45DFD092306FB4D00ABBC29 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 				E417F76323074DC400FFE9A4 /* CONTRIBUTING.md */,
 				E417F76123074C6700FFE9A4 /* README.md */,
 				E4EF323322F4228700708323 /* redditapi */,
-				E42B1B8D22F3240500DCCB35 /* macreddit */,
-				E42B1BA022F3240700DCCB35 /* macredditTests */,
+				E42B1B8D22F3240500DCCB35 /* tempestclient */,
+				E42B1BA022F3240700DCCB35 /* tempestclientTests */,
 				E42B1B8C22F3240500DCCB35 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,13 +151,13 @@
 		E42B1B8C22F3240500DCCB35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E42B1B8B22F3240500DCCB35 /* macreddit.app */,
-				E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */,
+				E42B1B8B22F3240500DCCB35 /* tempestclient.app */,
+				E42B1B9D22F3240700DCCB35 /* tempestclientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E42B1B8D22F3240500DCCB35 /* macreddit */ = {
+		E42B1B8D22F3240500DCCB35 /* tempestclient */ = {
 			isa = PBXGroup;
 			children = (
 				E487676523058363004BCBB3 /* Configuration */,
@@ -167,20 +167,20 @@
 				E42B1B9222F3240600DCCB35 /* Assets.xcassets */,
 				E42B1B9422F3240600DCCB35 /* Main.storyboard */,
 				E42B1B9722F3240700DCCB35 /* Info.plist */,
-				E42B1B9822F3240700DCCB35 /* macreddit.entitlements */,
+				E42B1B9822F3240700DCCB35 /* tempestclient.entitlements */,
 				E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */,
 				E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */,
 			);
-			path = macreddit;
+			path = tempestclient;
 			sourceTree = "<group>";
 		};
-		E42B1BA022F3240700DCCB35 /* macredditTests */ = {
+		E42B1BA022F3240700DCCB35 /* tempestclientTests */ = {
 			isa = PBXGroup;
 			children = (
-				E42B1BA122F3240700DCCB35 /* macredditTests.swift */,
+				E42B1BA122F3240700DCCB35 /* tempestclientTests.swift */,
 				E42B1BA322F3240700DCCB35 /* Info.plist */,
 			);
-			path = macredditTests;
+			path = tempestclientTests;
 			sourceTree = "<group>";
 		};
 		E45DFD062306F49200ABBC29 /* Things */ = {
@@ -242,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E42B1B8A22F3240500DCCB35 /* macreddit */ = {
+		E42B1B8A22F3240500DCCB35 /* tempestclient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E42B1BA622F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macreddit" */;
+			buildConfigurationList = E42B1BA622F3240700DCCB35 /* Build configuration list for PBXNativeTarget "tempestclient" */;
 			buildPhases = (
 				E42B1B8722F3240500DCCB35 /* Sources */,
 				E42B1B8822F3240500DCCB35 /* Frameworks */,
@@ -254,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = macreddit;
-			productName = macreddit;
-			productReference = E42B1B8B22F3240500DCCB35 /* macreddit.app */;
+			name = tempestclient;
+			productName = tempestclient;
+			productReference = E42B1B8B22F3240500DCCB35 /* tempestclient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E42B1B9C22F3240700DCCB35 /* macredditTests */ = {
+		E42B1B9C22F3240700DCCB35 /* tempestclientTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E42B1BA922F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macredditTests" */;
+			buildConfigurationList = E42B1BA922F3240700DCCB35 /* Build configuration list for PBXNativeTarget "tempestclientTests" */;
 			buildPhases = (
 				E42B1B9922F3240700DCCB35 /* Sources */,
 				E42B1B9A22F3240700DCCB35 /* Frameworks */,
@@ -272,9 +272,9 @@
 			dependencies = (
 				E42B1B9F22F3240700DCCB35 /* PBXTargetDependency */,
 			);
-			name = macredditTests;
-			productName = macredditTests;
-			productReference = E42B1B9D22F3240700DCCB35 /* macredditTests.xctest */;
+			name = tempestclientTests;
+			productName = tempestclientTests;
+			productReference = E42B1B9D22F3240700DCCB35 /* tempestclientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -314,8 +314,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E42B1B8A22F3240500DCCB35 /* macreddit */,
-				E42B1B9C22F3240700DCCB35 /* macredditTests */,
+				E42B1B8A22F3240500DCCB35 /* tempestclient */,
+				E42B1B9C22F3240700DCCB35 /* tempestclientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,7 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E42B1BA222F3240700DCCB35 /* macredditTests.swift in Sources */,
+				E42B1BA222F3240700DCCB35 /* tempestclientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +382,7 @@
 /* Begin PBXTargetDependency section */
 		E42B1B9F22F3240700DCCB35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E42B1B8A22F3240500DCCB35 /* macreddit */;
+			target = E42B1B8A22F3240500DCCB35 /* tempestclient */;
 			targetProxy = E42B1B9E22F3240700DCCB35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -520,16 +520,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = macreddit/macreddit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = tempestclient/tempestclient.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TLQT7X5MG6;
-				INFOPLIST_FILE = macreddit/Info.plist;
+				INFOPLIST_FILE = tempestclient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macreddit;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.tempestclient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -539,16 +539,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = macreddit/macreddit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = tempestclient/tempestclient.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TLQT7X5MG6;
-				INFOPLIST_FILE = macreddit/Info.plist;
+				INFOPLIST_FILE = tempestclient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macreddit;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.tempestclient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -561,16 +561,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = macredditTests/Info.plist;
+				INFOPLIST_FILE = tempestclientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macredditTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.tempestclientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macreddit.app/Contents/MacOS/macreddit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tempestclient.app/Contents/MacOS/tempestclient";
 			};
 			name = Debug;
 		};
@@ -581,16 +581,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = macredditTests/Info.plist;
+				INFOPLIST_FILE = tempestclientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.macredditTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.tempest.tempestclientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macreddit.app/Contents/MacOS/macreddit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tempestclient.app/Contents/MacOS/tempestclient";
 			};
 			name = Release;
 		};
@@ -606,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E42B1BA622F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macreddit" */ = {
+		E42B1BA622F3240700DCCB35 /* Build configuration list for PBXNativeTarget "tempestclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E42B1BA722F3240700DCCB35 /* Debug */,
@@ -615,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E42B1BA922F3240700DCCB35 /* Build configuration list for PBXNativeTarget "macredditTests" */ = {
+		E42B1BA922F3240700DCCB35 /* Build configuration list for PBXNativeTarget "tempestclientTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E42B1BAA22F3240700DCCB35 /* Debug */,
