@@ -11,6 +11,12 @@ import Foundation
 class SubredditViewModel: ListingViewModel {
     private let subreddit: Subreddit
     
+    var isLoading: Bool {
+        get {
+            return subreddit.isLoading
+        }
+    }
+    
     init(withSubreddit subreddit: Subreddit) {
         self.subreddit = subreddit
     }
@@ -25,8 +31,8 @@ class SubredditViewModel: ListingViewModel {
         }
     }
     
-    func next(completion: (Result<Bool, LoadingError>) -> Void) {
-        
+    func next(completion: @escaping (Result<Bool, LoadingError>) -> Void) {
+        subreddit.loadPosts(completion: completion)
     }
     
     func getPostAtIndex(index: Int) -> Post? {

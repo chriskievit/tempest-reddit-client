@@ -28,6 +28,7 @@
 		E487676B230595A9004BCBB3 /* ListingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676A230595A9004BCBB3 /* ListingController.swift */; };
 		E487676D2305A198004BCBB3 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676C2305A198004BCBB3 /* Listing.swift */; };
 		E48767732305A407004BCBB3 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767722305A407004BCBB3 /* Thing.swift */; };
+		E48CA3362307FEDE007A8DE2 /* SubredditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48CA3352307FEDE007A8DE2 /* SubredditController.swift */; };
 		E4951DC022F4C6D400F050D8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DBF22F4C6D400F050D8 /* AuthController.swift */; };
 		E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC222F4CD7600F050D8 /* AuthViewModel.swift */; };
 		E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4951DC422F4D04700F050D8 /* AccessToken.swift */; };
@@ -71,6 +72,7 @@
 		E487676A230595A9004BCBB3 /* ListingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingController.swift; sourceTree = "<group>"; };
 		E487676C2305A198004BCBB3 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		E48767722305A407004BCBB3 /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		E48CA3352307FEDE007A8DE2 /* SubredditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditController.swift; sourceTree = "<group>"; };
 		E4951DBC22F4C2AA00F050D8 /* Config.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Debug.xcconfig; sourceTree = "<group>"; };
 		E4951DBD22F4C2BB00F050D8 /* Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.Release.xcconfig; sourceTree = "<group>"; };
 		E4951DBF22F4C6D400F050D8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				E4EF323422F422EF00708323 /* ApiController.swift */,
 				E4951DBF22F4C6D400F050D8 /* AuthController.swift */,
 				E487676A230595A9004BCBB3 /* ListingController.swift */,
+				E48CA3352307FEDE007A8DE2 /* SubredditController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				E487676B230595A9004BCBB3 /* ListingController.swift in Sources */,
 				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
 				E417F75E2307455D00FFE9A4 /* SubredditViewModel.swift in Sources */,
+				E48CA3362307FEDE007A8DE2 /* SubredditController.swift in Sources */,
 				E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */,
 				E42B1B8F22F3240500DCCB35 /* AppDelegate.swift in Sources */,
 				E4951DC322F4CD7600F050D8 /* AuthViewModel.swift in Sources */,

@@ -25,7 +25,7 @@ class Post: Thing {
     var comments: Int
     var thumbnail: String
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case title
         case author
         case authorFlair = "author_flair_text"
@@ -43,24 +43,31 @@ class Post: Thing {
         case thumbnail
     }
     
+    private enum DataKeys: String, CodingKey {
+        case data
+    }
+    
     required init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        title = try values.decode(String.self, forKey: .title)
-        author = try values.decode(String.self, forKey: .author)
-        authorFlair = try values.decodeIfPresent(String.self, forKey: .authorFlair) ?? ""
-        created = try values.decode(Date.self, forKey: .created)
-        clicked = try values.decode(Bool.self, forKey: .clicked)
-        stickied = try values.decode(Bool.self, forKey: .stickied)
-        spoiler = try values.decode(Bool.self, forKey: .spoiler)
-        isVideo = try values.decode(Bool.self, forKey: .isVideo)
-        nsfw = try values.decode(Bool.self, forKey: .nsfw)
-        flair = try values.decodeIfPresent(String.self, forKey: .flair) ?? ""
-        upvotes = try values.decode(Int.self, forKey: .upvotes)
-        downvotes = try values.decode(Int.self, forKey: .downvotes)
-        score = try values.decode(Int.self, forKey: .comments)
-        comments = try values.decode(Int.self, forKey: .comments)
-        thumbnail = try values.decode(String.self, forKey: .thumbnail)
+        let values = try decoder.container(keyedBy: DataKeys.self)
+        let dataValues = try values.nestedContainer(keyedBy: CodingKeys.self, forKey: .data)
         
-        try super.init(from: decoder)
+        title = try dataValues.decode(String.self, forKey: .title)
+        author = try dataValues.decode(String.self, forKey: .author)
+        authorFlair = try dataValues.decodeIfPresent(String.self, forKey: .authorFlair) ?? ""
+        created = try dataValues.decode(Date.self, forKey: .created)
+        clicked = try dataValues.decode(Bool.self, forKey: .clicked)
+        stickied = try dataValues.decode(Bool.self, forKey: .stickied)
+        spoiler = try dataValues.decode(Bool.self, forKey: .spoiler)
+        isVideo = try dataValues.decode(Bool.self, forKey: .isVideo)
+        nsfw = try dataValues.decode(Bool.self, forKey: .nsfw)
+        flair = try dataValues.decodeIfPresent(String.self, forKey: .flair) ?? ""
+        upvotes = try dataValues.decode(Int.self, forKey: .upvotes)
+        downvotes = try dataValues.decode(Int.self, forKey: .downvotes)
+        score = try dataValues.decode(Int.self, forKey: .comments)
+        comments = try dataValues.decode(Int.self, forKey: .comments)
+        thumbnail = try dataValues.decode(String.self, forKey: .thumbnail)
+        
+        let superDecoder = try values.superDecoder()
+        try super.init(from: superDecoder)
     }
 }

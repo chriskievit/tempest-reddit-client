@@ -1096,7 +1096,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="ws2-1u-IKi">
+                                                        <tableCellView identifier="TextViewCell" id="ws2-1u-IKi">
                                                             <rect key="frame" x="1" y="1" width="308" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1145,6 +1145,9 @@
                             <constraint firstAttribute="bottom" secondItem="H2F-qa-zoj" secondAttribute="bottom" id="uuY-bF-M2n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TrA-F0-OAy" id="HgX-tB-plx"/>
+                    </connections>
                 </viewController>
                 <customObject id="cpu-Fi-BLt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

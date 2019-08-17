@@ -14,5 +14,5 @@ enum LoadingError: Error {
 }
 
 protocol ListingViewModel {
-    func next(completion: (Result<Bool, LoadingError>) -> Void)
+    func next(completion: @escaping (Result<Bool, LoadingError>) -> Void)
 }

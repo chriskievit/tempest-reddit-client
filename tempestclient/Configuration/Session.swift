@@ -43,6 +43,10 @@ class Session {
         _authToken = token
     }
     
+    func getAuthToken() -> AccessToken? {
+        return _authToken
+    }
+    
     func getAuthUrl() -> URL? {
         return AuthController.generateAuthUrl(clientId: getClientId(), redirectUrl: getReturnUrl(), scopes: _scopes)
     }

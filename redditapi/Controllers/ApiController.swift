@@ -96,6 +96,10 @@ extension ApiController {
         // Set default headers
         request.addValue(contentType, forHTTPHeaderField: "Content-Type")
         
+        if ApplicationContext.shared.session.isAuthenticated() {
+            request.addValue("bearer \(ApplicationContext.shared.session.getAuthToken()!.accessToken)", forHTTPHeaderField: "Authorization")
+        }
+        
         return request
     }
     
@@ -123,6 +127,10 @@ extension ApiController {
             return nil
         }
         
-        return try? JSONDecoder().decode(T.self, from: data)
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch (let error) {
+            return nil
+        }
     }
 }
