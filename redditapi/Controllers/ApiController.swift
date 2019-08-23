@@ -129,7 +129,7 @@ extension ApiController {
         
         do {
             return try JSONDecoder().decode(T.self, from: data)
-        } catch (let error) {
+        } catch (_) {
             return nil
         }
     }
