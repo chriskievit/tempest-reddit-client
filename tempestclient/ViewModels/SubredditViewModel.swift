@@ -11,16 +11,16 @@ import Foundation
 class SubredditViewModel: ListingViewModel {
     private let subreddit: Subreddit
     
-    let batchSize:Int = 25
+    var batchSize: Int {
+        get {
+            return subreddit.batchSize
+        }
+    }
     
     var isLoading: Bool {
         get {
             return subreddit.isLoading
         }
-    }
-    
-    init(withSubreddit subreddit: Subreddit) {
-        self.subreddit = subreddit
     }
     
     var numPosts: Int {
@@ -31,6 +31,10 @@ class SubredditViewModel: ListingViewModel {
             
             return posts.count
         }
+    }
+    
+    init(withSubreddit subreddit: Subreddit) {
+        self.subreddit = subreddit
     }
     
     func next(completion: @escaping (Result<Bool, LoadingError>) -> Void) {
