@@ -11,6 +11,8 @@ import Foundation
 class SubredditViewModel: ListingViewModel {
     private let subreddit: Subreddit
     
+    let batchSize:Int = 25
+    
     var isLoading: Bool {
         get {
             return subreddit.isLoading

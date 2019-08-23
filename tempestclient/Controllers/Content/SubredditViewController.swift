@@ -11,6 +11,7 @@ import Cocoa
 
 class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var tableView: NSTableView!
+    
     let viewModel: SubredditViewModel
     
     private enum CellIdentifiers {
@@ -38,7 +39,9 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
             switch result {
             case .success(_):
                 DispatchQueue.main.async{
-                    self.tableView.reloadData()
+                    let currentNumPosts = self.viewModel.numPosts
+                    let batchSize = self.viewModel.batchSize
+                    self.tableView.insertRows(at: IndexSet(integersIn: currentNumPosts-batchSize...currentNumPosts-1), withAnimation: .slideDown)
                 }
                 break
             case.failure(let error):
@@ -52,8 +55,6 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        determineLazyLoad(row: row)
-        
         let post: Post? = viewModel.getPostAtIndex(index: row)
         
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.SubredditViewCell), owner: nil) as? SubredditCell,
@@ -75,9 +76,11 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
         return nil
     }
     
-    func determineLazyLoad(row: Int) {
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         if row == viewModel.numPosts - 5, !viewModel.isLoading {
             self.loadPosts()
         }
+        
+        return nil
     }
 }
