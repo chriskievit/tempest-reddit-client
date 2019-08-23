@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <plugIn identifier="com.apple.WebKit2IBPlugin" version="14490.70"/>
-        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1098,7 +1097,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="TextViewCell" misplaced="YES" id="5HP-YX-H60">
+                                                        <tableCellView identifier="SubredditViewCell" misplaced="YES" id="5HP-YX-H60" customClass="SubredditCell" customModule="tempestclient" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="395" height="70"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1112,50 +1111,50 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hUO-Kb-K76">
-                                                                    <rect key="frame" x="57" y="5" width="135" height="15"/>
+                                                                    <rect key="frame" x="57" y="9" width="135" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="15" id="AaU-cW-jX3"/>
                                                                         <constraint firstAttribute="width" constant="131" id="ZJm-vc-EW1"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="21CharactersAndNoMore" id="deL-sF-99g">
-                                                                        <font key="font" size="10" name="SFProDisplay-Heavy"/>
-                                                                        <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="font" size="12" name="SFProDisplay-Medium"/>
+                                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gfy-mn-YlQ">
-                                                                    <rect key="frame" x="196" y="5" width="29" height="15"/>
+                                                                    <rect key="frame" x="196" y="8" width="38" height="15"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="25" id="cWs-Ht-rV0"/>
+                                                                        <constraint firstAttribute="width" constant="34" id="cWs-Ht-rV0"/>
                                                                         <constraint firstAttribute="height" constant="15" id="exf-Ng-q1c"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="99.9k" id="H1v-Q7-NoX">
-                                                                        <font key="font" size="10" name="SFProDisplay-Light"/>
-                                                                        <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="font" size="11" name="SFProDisplay-Light"/>
+                                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mjJ-kb-Vkw">
-                                                                    <rect key="frame" x="229" y="5" width="33" height="15"/>
+                                                                    <rect key="frame" x="238" y="8" width="35" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="oE1-8D-d6f"/>
                                                                         <constraint firstAttribute="height" constant="15" id="wyz-69-WLS"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="99.9k" id="L1A-5r-He6">
-                                                                        <font key="font" size="10" name="SFProDisplay-Light"/>
-                                                                        <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="font" size="11" name="SFProDisplay-Light"/>
+                                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uWD-gS-4P5">
-                                                                    <rect key="frame" x="262" y="5" width="21" height="15"/>
+                                                                    <rect key="frame" x="277" y="8" width="29" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="15" id="Mfe-R5-jQB"/>
-                                                                        <constraint firstAttribute="width" constant="17" id="wdO-cg-K4Z"/>
+                                                                        <constraint firstAttribute="width" constant="25" id="wdO-cg-K4Z"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="24d" id="Gjx-0J-MHW">
-                                                                        <font key="font" size="10" name="SFProDisplay-Light"/>
-                                                                        <color key="textColor" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="font" size="11" name="SFProDisplay-Light"/>
+                                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
@@ -1167,25 +1166,45 @@
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSFolder" id="HD7-9G-FG3"/>
                                                                 </imageView>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E1w-2Y-GKB">
+                                                                    <rect key="frame" x="331" y="6" width="52" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="52" id="m5b-WJ-0za"/>
+                                                                        <constraint firstAttribute="height" constant="17" id="s1x-GA-fae"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="nsfw" drawsBackground="YES" usesSingleLineMode="YES" id="xrM-b5-lv3">
+                                                                        <font key="font" size="13" name="SFProDisplay-Bold"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="fPx-FQ-qMf" firstAttribute="leading" secondItem="5HP-YX-H60" secondAttribute="leading" constant="61" id="BSn-Es-20L"/>
                                                                 <constraint firstItem="lGf-B1-dD9" firstAttribute="leading" secondItem="5HP-YX-H60" secondAttribute="leading" constant="3" id="GuU-o7-KYM"/>
+                                                                <constraint firstAttribute="trailing" secondItem="E1w-2Y-GKB" secondAttribute="trailing" constant="12" id="JWb-j7-Wkb"/>
+                                                                <constraint firstAttribute="bottom" secondItem="E1w-2Y-GKB" secondAttribute="bottom" constant="6" id="LJi-nT-JBE"/>
                                                                 <constraint firstItem="fPx-FQ-qMf" firstAttribute="top" secondItem="5HP-YX-H60" secondAttribute="top" constant="3" id="TjP-g1-uJG"/>
                                                                 <constraint firstItem="hUO-Kb-K76" firstAttribute="leading" secondItem="5HP-YX-H60" secondAttribute="leading" constant="59" id="b4K-yO-QFa"/>
                                                                 <constraint firstItem="Gfy-mn-YlQ" firstAttribute="leading" secondItem="hUO-Kb-K76" secondAttribute="trailing" constant="8" id="cuZ-nV-l77"/>
-                                                                <constraint firstAttribute="bottom" secondItem="Gfy-mn-YlQ" secondAttribute="bottom" constant="5" id="dGw-2V-Rui"/>
-                                                                <constraint firstAttribute="bottom" secondItem="uWD-gS-4P5" secondAttribute="bottom" constant="5" id="lBS-PR-rNK"/>
-                                                                <constraint firstAttribute="bottom" secondItem="mjJ-kb-Vkw" secondAttribute="bottom" constant="5" id="le7-PP-m9o"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Gfy-mn-YlQ" secondAttribute="bottom" constant="8" id="dGw-2V-Rui"/>
+                                                                <constraint firstAttribute="bottom" secondItem="uWD-gS-4P5" secondAttribute="bottom" constant="8" id="lBS-PR-rNK"/>
+                                                                <constraint firstAttribute="bottom" secondItem="mjJ-kb-Vkw" secondAttribute="bottom" constant="8" id="le7-PP-m9o"/>
                                                                 <constraint firstItem="lGf-B1-dD9" firstAttribute="centerY" secondItem="5HP-YX-H60" secondAttribute="centerY" id="mZZ-7I-n5z"/>
                                                                 <constraint firstAttribute="bottom" secondItem="fPx-FQ-qMf" secondAttribute="bottom" constant="35" id="pm1-Dg-Vi0"/>
-                                                                <constraint firstAttribute="bottom" secondItem="hUO-Kb-K76" secondAttribute="bottom" constant="5" id="q03-Uo-TjZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hUO-Kb-K76" secondAttribute="bottom" constant="9" id="q03-Uo-TjZ"/>
                                                                 <constraint firstItem="mjJ-kb-Vkw" firstAttribute="leading" secondItem="Gfy-mn-YlQ" secondAttribute="trailing" constant="8" id="sxz-NC-apd"/>
                                                                 <constraint firstAttribute="trailing" secondItem="fPx-FQ-qMf" secondAttribute="trailing" constant="12" id="w6h-8J-AKx"/>
-                                                                <constraint firstItem="uWD-gS-4P5" firstAttribute="leading" secondItem="mjJ-kb-Vkw" secondAttribute="trailing" constant="4" id="z3V-SZ-ffw"/>
+                                                                <constraint firstItem="uWD-gS-4P5" firstAttribute="leading" secondItem="mjJ-kb-Vkw" secondAttribute="trailing" constant="8" id="z3V-SZ-ffw"/>
                                                             </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="fPx-FQ-qMf" id="Xlt-VO-9ok"/>
+                                                                <outlet property="commentsLabel" destination="mjJ-kb-Vkw" id="p5l-9n-39F"/>
+                                                                <outlet property="nsfwLabel" destination="E1w-2Y-GKB" id="u9p-dV-o8c"/>
+                                                                <outlet property="previewImageView" destination="lGf-B1-dD9" id="82f-uf-EMN"/>
+                                                                <outlet property="scoreLabel" destination="Gfy-mn-YlQ" id="sSX-9p-aBg"/>
+                                                                <outlet property="subredditLabel" destination="hUO-Kb-K76" id="iAn-Dl-vN1"/>
+                                                                <outlet property="textField" destination="fPx-FQ-qMf" id="2rd-4Y-KvR"/>
+                                                                <outlet property="timeLabel" destination="uWD-gS-4P5" id="W8f-p9-WVa"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>

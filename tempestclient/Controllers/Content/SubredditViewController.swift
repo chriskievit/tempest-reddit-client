@@ -14,7 +14,7 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
     let viewModel: SubredditViewModel
     
     private enum CellIdentifiers {
-        static let TextViewCell = "TextViewCell"
+        static let SubredditViewCell = "SubredditViewCell"
     }
     
     required init?(coder: NSCoder) {
@@ -56,9 +56,19 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
         
         let post: Post? = viewModel.getPostAtIndex(index: row)
         
-        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.TextViewCell), owner: nil) as? NSTableCellView,
+        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.SubredditViewCell), owner: nil) as? SubredditCell,
             let post = post {
             cell.textField?.stringValue = post.title
+            cell.subredditLabel.stringValue = post.subreddit
+            cell.commentsLabel.stringValue = "\(post.comments)"
+            cell.scoreLabel.stringValue = "\(post.score)"
+            cell.nsfwLabel.isHidden = !post.nsfw
+            
+            if let thumbnail = post.thumbnail {
+                let image = NSImage(byReferencing: URL(string: thumbnail)!)
+                cell.previewImageView.image = image
+            }
+            
             return cell
         }
         

@@ -12,6 +12,7 @@ class Post: Thing {
     var title: String
     var author: String
     var authorFlair: String?
+    var subreddit: String
     var created: Date
     var clicked: Bool
     var stickied: Bool
@@ -23,12 +24,13 @@ class Post: Thing {
     var downvotes: Int
     var score: Int
     var comments: Int
-    var thumbnail: String
+    var thumbnail: String?
     
     private enum CodingKeys: String, CodingKey {
         case title
         case author
         case authorFlair = "author_flair_text"
+        case subreddit
         case created
         case clicked
         case stickied
@@ -53,19 +55,20 @@ class Post: Thing {
         
         title = try dataValues.decode(String.self, forKey: .title)
         author = try dataValues.decode(String.self, forKey: .author)
-        authorFlair = try dataValues.decodeIfPresent(String.self, forKey: .authorFlair) ?? ""
+        authorFlair = try dataValues.decodeIfPresent(String.self, forKey: .authorFlair)
+        subreddit = try dataValues.decode(String.self, forKey: .subreddit)
         created = try dataValues.decode(Date.self, forKey: .created)
         clicked = try dataValues.decode(Bool.self, forKey: .clicked)
         stickied = try dataValues.decode(Bool.self, forKey: .stickied)
         spoiler = try dataValues.decode(Bool.self, forKey: .spoiler)
         isVideo = try dataValues.decode(Bool.self, forKey: .isVideo)
         nsfw = try dataValues.decode(Bool.self, forKey: .nsfw)
-        flair = try dataValues.decodeIfPresent(String.self, forKey: .flair) ?? ""
+        flair = try dataValues.decodeIfPresent(String.self, forKey: .flair)
         upvotes = try dataValues.decode(Int.self, forKey: .upvotes)
         downvotes = try dataValues.decode(Int.self, forKey: .downvotes)
-        score = try dataValues.decode(Int.self, forKey: .comments)
+        score = try dataValues.decode(Int.self, forKey: .score)
         comments = try dataValues.decode(Int.self, forKey: .comments)
-        thumbnail = try dataValues.decode(String.self, forKey: .thumbnail)
+        thumbnail = try dataValues.decodeIfPresent(String.self, forKey: .thumbnail)
         
         let superDecoder = try values.superDecoder()
         try super.init(from: superDecoder)

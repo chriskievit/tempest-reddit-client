@@ -22,6 +22,7 @@
 		E42B1BA222F3240700DCCB35 /* tempestclientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B1BA122F3240700DCCB35 /* tempestclientTests.swift */; };
 		E45DFD082306FA3D00ABBC29 /* Subreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45DFD072306FA3D00ABBC29 /* Subreddit.swift */; };
 		E45DFD0A2306FB4D00ABBC29 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45DFD092306FB4D00ABBC29 /* Post.swift */; };
+		E47878ED2310278C00257F55 /* SubredditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47878EC2310278C00257F55 /* SubredditCell.swift */; };
 		E487676423055CEE004BCBB3 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487676323055CEE004BCBB3 /* AccountsViewController.swift */; };
 		E48767672305838A004BCBB3 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767662305838A004BCBB3 /* ApplicationContext.swift */; };
 		E48767692305853E004BCBB3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48767682305853E004BCBB3 /* Session.swift */; };
@@ -66,6 +67,7 @@
 		E42B1BA322F3240700DCCB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45DFD072306FA3D00ABBC29 /* Subreddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subreddit.swift; sourceTree = "<group>"; };
 		E45DFD092306FB4D00ABBC29 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E47878EC2310278C00257F55 /* SubredditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditCell.swift; sourceTree = "<group>"; };
 		E487676323055CEE004BCBB3 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		E48767662305838A004BCBB3 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		E48767682305853E004BCBB3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		E42B1B8D22F3240500DCCB35 /* tempestclient */ = {
 			isa = PBXGroup;
 			children = (
+				E47878EB2310277800257F55 /* Cells */,
 				E487676523058363004BCBB3 /* Configuration */,
 				E4951DC122F4CD5F00F050D8 /* ViewModels */,
 				E42913A322F48378000639A5 /* Controllers */,
@@ -195,6 +198,14 @@
 				E45DFD092306FB4D00ABBC29 /* Post.swift */,
 			);
 			path = Things;
+			sourceTree = "<group>";
+		};
+		E47878EB2310277800257F55 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E47878EC2310278C00257F55 /* SubredditCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E487676223055CD8004BCBB3 /* Account */ = {
@@ -357,6 +368,7 @@
 				E45DFD0A2306FB4D00ABBC29 /* Post.swift in Sources */,
 				E4951DC522F4D04700F050D8 /* AccessToken.swift in Sources */,
 				E417F760230746A300FFE9A4 /* ListingViewModel.swift in Sources */,
+				E47878ED2310278C00257F55 /* SubredditCell.swift in Sources */,
 				E487676D2305A198004BCBB3 /* Listing.swift in Sources */,
 				E487676B230595A9004BCBB3 /* ListingController.swift in Sources */,
 				E42913A722F485A4000639A5 /* AuthWindowController.swift in Sources */,
