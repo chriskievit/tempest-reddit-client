@@ -66,7 +66,16 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
             cell.nsfwLabel.isHidden = !post.nsfw
             
             if let thumbnail = post.thumbnail {
-                let image = NSImage(byReferencing: URL(string: thumbnail)!)
+                var image = NSImage(named: NSImage.touchBarTextCenterAlignTemplateName)
+                if thumbnail.starts(with: "https"), let thumbUrl = URL(string: thumbnail) {
+                    image = NSImage(byReferencing: thumbUrl)
+                }
+                
+                // Set rounded corner
+                cell.previewImageView.wantsLayer = true
+                cell.previewImageView.layer?.cornerRadius = 8.0
+                cell.previewImageView.layer?.masksToBounds = true
+                
                 cell.previewImageView.image = image
             }
             
