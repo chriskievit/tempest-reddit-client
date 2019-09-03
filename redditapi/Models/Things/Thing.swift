@@ -27,12 +27,11 @@ class Thing: Decodable {
     }
     
     required init(from decoder: Decoder) throws {
-        let values = try? decoder.container(keyedBy: DataKeys.self)
+        let values = try? decoder.container(keyedBy: CodingKeys.self)
         
         if let values = values {
-            let dataValues = try values.nestedContainer(keyedBy: CodingKeys.self, forKey: .data)
-            name = try dataValues.decodeIfPresent(String.self, forKey: .name) ?? ""
-            id = try dataValues.decodeIfPresent(String.self, forKey: .id) ?? ""
+            name = try values.decodeIfPresent(String.self, forKey: .name) ?? ""
+            id = try values.decodeIfPresent(String.self, forKey: .id) ?? ""
         } else {
             name = ""
             id = ""

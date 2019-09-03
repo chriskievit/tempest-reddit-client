@@ -61,7 +61,7 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
             let post = post {
             cell.textField?.stringValue = post.title
             cell.subredditLabel.stringValue = post.subreddit
-            cell.commentsLabel.stringValue = "\(post.comments)"
+            cell.commentsLabel.stringValue = "\(post.numComments)"
             cell.scoreLabel.stringValue = "\(post.score)"
             cell.nsfwLabel.isHidden = !post.nsfw
             

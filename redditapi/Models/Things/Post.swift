@@ -23,7 +23,7 @@ class Post: Thing {
     var upvotes: Int
     var downvotes: Int
     var score: Int
-    var comments: Int
+    var numComments: Int
     var thumbnail: String?
     
     private enum CodingKeys: String, CodingKey {
@@ -41,7 +41,7 @@ class Post: Thing {
         case upvotes = "ups"
         case downvotes = "downs"
         case score
-        case comments = "num_comments"
+        case numComments = "num_comments"
         case thumbnail
     }
     
@@ -67,10 +67,10 @@ class Post: Thing {
         upvotes = try dataValues.decode(Int.self, forKey: .upvotes)
         downvotes = try dataValues.decode(Int.self, forKey: .downvotes)
         score = try dataValues.decode(Int.self, forKey: .score)
-        comments = try dataValues.decode(Int.self, forKey: .comments)
+        numComments = try dataValues.decode(Int.self, forKey: .numComments)
         thumbnail = try dataValues.decodeIfPresent(String.self, forKey: .thumbnail)
         
-        let superDecoder = try values.superDecoder()
+        let superDecoder = try values.superDecoder(forKey: .data)
         try super.init(from: superDecoder)
     }
 }

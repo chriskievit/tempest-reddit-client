@@ -11,15 +11,14 @@ import Foundation
 class Subreddit: Thing {
     private var after: String?
     private var before: String?
-    private var hasAdditionalPosts: Bool = true
-    
+    private var hasAdditionalThings: Bool = true
     let batchSize: Int = 25
-    
-    var posts: [Post]?
     var isLoading: Bool  = false
     
+    var posts: [Post]?
+    
     func loadPosts(completion: @escaping (Result<Bool, LoadingError>) -> Void) {
-        if hasAdditionalPosts {
+        if hasAdditionalThings {
             isLoading = true
             SubredditController.getPosts(subreddit: name, before: nil, after: after, count: posts?.count) { (result: Result<Listing<Post>, RequestError>) in
                 switch result {
@@ -46,7 +45,7 @@ class Subreddit: Thing {
         
         if let newPosts = listing.children {
             if newPosts.count < batchSize {
-                hasAdditionalPosts = false
+                hasAdditionalThings = false
             }
             
             posts!.append(contentsOf: newPosts)
