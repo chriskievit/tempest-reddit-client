@@ -13,6 +13,7 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
     @IBOutlet weak var tableView: NSTableView!
     
     let viewModel: SubredditViewModel
+    var selectedRow = -1
     
     private enum CellIdentifiers {
         static let SubredditViewCell = "SubredditViewCell"
@@ -91,5 +92,14 @@ class SubredditViewController: NSViewController, NSTableViewDelegate, NSTableVie
         }
         
         return nil
+    }
+    
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        if self.selectedRow != row,
+            let post: Post = viewModel.getPostAtIndex(index: row) {
+            print("selected post with id \(post.id)")
+        }
+        
+        return true
     }
 }
